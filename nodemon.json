@@ -1,0 +1,12 @@
+{
+  "execMap": {
+    "ts": "ts-node"
+  },
+
+  "env": {
+    "NODE_PATH": "./src"
+  },
+  "ext": "ts",
+
+  "exec": "ts-node src/index.ts"
+}

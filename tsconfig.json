@@ -1,0 +1,53 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "allowUnreachableCode": true,
+    // "baseUrl": "src", // absolute import paths
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "lib": ["es5", "es6", "dom", "dom.iterable"],
+    "module": "es2020",
+    "target": "es2020",
+    "moduleResolution": "node",
+    "outDir": "dist",
+    // "rootDir": "src",
+    "types": ["node", "jest", "express", "ts-node", "ts-jest"],
+
+    // Minimal strictness
+    // https://www.carlrippon.com/controlling-type-checking-strictness-in-typescript/
+    // https://betterprogramming.pub/getting-strict-with-typescript-2e906b48c0a
+    "checkJs": false,
+    "strict": false,
+    "alwaysStrict": false,
+    "noImplicitAny": false,
+    "noImplicitThis": false,
+    "noImplicitUseStrict": false,
+    "noStrictGenericChecks": false,
+    "strictBindCallApply": false,
+    "strictFunctionTypes": false,
+    "strictNullChecks": false,
+    "strictPropertyInitialization": false,
+
+    // Skip stuff (less strict)
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+
+    // https://www.typescriptlang.org/docs/handbook/babel-with-typescript.html#type-checking-and-dts-file-generation
+    // Ensure that .d.ts files are created by tsc, but not .js files
+    "declaration": true,
+    // "emitDeclarationOnly": true,
+
+    // Ensure that Babel can safely transpile files in the TypeScript project
+    "isolatedModules": true,
+    "sourceMap": true
+  },
+  "ts-node": {
+    // No extensions required on imports
+    // https://typestrong.org/ts-node/docs/options/#experimentalresolver
+    "experimentalResolver": true,
+    "experimentalSpecifierResolution": "node",
+    "esm": true // required to recognize TS extensions
+  },
+  "include": ["src/**/*.ts", "src/**/*.js"],
+  "exclude": ["node_modules", "<node_internals>/**"]
+}
